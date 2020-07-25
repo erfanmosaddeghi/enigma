@@ -83,11 +83,12 @@ class enigma:
         """
         this method for rotate rotors
         """
-        #TODO: This method not compeleted
         self.rotors[0] = self.rotors[0][1:] + self.rotors[0][0]
         self.state_rotate += 1
         if self.state_rotate % (len(self.alphabets) * (self.state_rotor + 1)) == 0:
+            self.state_rotate = 0
             self.state_rotor += 1
+            
             
             if self.state_rotor >= len(self.rotors):
                 self.state_rotor = 0
