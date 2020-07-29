@@ -96,3 +96,32 @@ class enigma:
             self.rotors[self.state_rotor] = self.rotors[self.state_rotor][1:] + self.rotors[self.state_rotor][0]
             
 
+    def run(self,plain):
+        """
+                This Method for Run enigma machine 
+                submit settings and options for start
+        """
+        cipher = ''
+        self.read_test()
+        for c in plain:
+            print(self.state_rotor)
+            if c in self.plugboard.keys():
+                c = self.plugboard[c]
+            cipher += self.master_mind(c)
+            self.rotate_rotors()
+
+
+        file = open('./cipher.txt','w')
+        file.write(cipher)
+        file.close()
+
+
+    def setup(self,count_rotor,plugboard):
+        """
+                THIS METHOD FOR SETUP ENIGMA MACHINE &
+                SAVE FILE FOR ENIGMA
+        """
+        self.rotor_plugboard_generator(count_rotor,plugboard)
+        self.read_test()
+        print('rotors = {}'.format(self.rotors))
+        print('plugboards = {}'.format(self.plugboard))
