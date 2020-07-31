@@ -7,7 +7,7 @@ class enigma:
         self.alphabet_en = "abcdefghijklmnopqrstuvwxyz"
         self.alphabet_en_big = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         self.alphabet_sign = ".:;’~`?,!@#$%^&*()[]{}'<>/\-_=+ 0123456789۰۱۲۳۴۵۶۷۸۹"
-        self.alphabet_fa = "ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی"
+        self.alphabet_fa = "اأإةآبپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی"
         self.alphabets = self.alphabet_en + self.alphabet_fa + self.alphabet_sign + self.alphabet_en_big
         self.plugboard = {}
         self.count_rotors = ''
