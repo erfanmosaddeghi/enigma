@@ -12,10 +12,12 @@ The Project Simulated From Enigma Machine
 - 
 > enter text: hi
  
-*created chipher.txt file
-*Copy text from this File 
+* created chipher.txt file
+- 
+* Copy text from this File 
 then 
 > python3 run.py
 - 
 > enter text: '' <- paste it.
+- 
 So Go to the file cipher.txt and see -> 'hi'
