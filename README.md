@@ -4,10 +4,12 @@ The Project Simulated From Enigma Machine
 ## Usage:
 - First Step:
 > python3 setup.py
+- 
 > Please Enter Count rotors: 
 
 - Scound Step:
 > python3 run.py
+- 
 > enter text: hi
  
 *created chipher.txt file
