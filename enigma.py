@@ -60,7 +60,16 @@ class enigma:
         #print(f'plugboards = > {self.plugboard}')
         character = ''
         #print(character,'\n')
+        """
+            This Here befor rotate started 
+            plugboard checked 
+            if x in plugboard:
+                x = plugboard[x]
+        """
+        if x in self.plugboard:
+            x = self.plugboard[x]
 
+        
         character = self.rotors[0][self.alphabets.find(x)]
         #print(f'character of rotor[0] = {character}')
         
@@ -76,6 +85,12 @@ class enigma:
             #print(f'character of rotor[{j-1}] = {character}')
 
         #print(f'i = {i}, len rotors = {len(self.rotors)}')
+        for key, value in self.plugboard.items():
+            if character == key:
+                character = value
+            elif character == value:
+                character = key
+            
         return character
 
 
@@ -104,9 +119,7 @@ class enigma:
         cipher = ''
         self.read_test()
         for c in plain:
-            print(self.state_rotor)
-            if c in self.plugboard.keys():
-                c = self.plugboard[c]
+            #print(self.state_rotor) 
             cipher += self.master_mind(c)
             self.rotate_rotors()
 

@@ -4,6 +4,6 @@ eni = enigma()
 
 count = int(input("Please Enter count rotors: "))
 
-plugboard = {}
+plugboard = {'a':'d','e':'y'}
 
 eni.setup(count,plugboard)
