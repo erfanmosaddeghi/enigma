@@ -66,8 +66,11 @@ class enigma:
             if x in plugboard:
                 x = plugboard[x]
         """
-        if x in self.plugboard:
-            x = self.plugboard[x]
+        for key, value in self.plugboard.items():
+            if x == key:
+                x = value
+            elif x == value:
+                x = key
 
         
         character = self.rotors[0][self.alphabets.find(x)]
